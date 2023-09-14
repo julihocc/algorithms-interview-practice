@@ -1,0 +1,7 @@
+FIND-MAXIMUM(A, low, high)
+1. if low == high
+2.     return A[low]
+3. mid = floor((low + high) / 2)
+4. leftMax = FIND-MAXIMUM(A, low, mid)
+5. rightMax = FIND-MAXIMUM(A, mid + 1, high)
+6. return max(leftMax, rightMax)
