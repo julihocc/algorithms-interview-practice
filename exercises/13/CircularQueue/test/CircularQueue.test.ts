@@ -1,19 +1,25 @@
-// test/CircularQueue.test.ts
+/**
+ * @file test/CircularQueue.test.ts
+ */
 
 import { CircularQueue } from "../src/CircularQueue";
-import { expect } from "chai";
-import "mocha";
 
+// Describe the CircularQueue test suite
 describe("CircularQueue", () => {
-    it("should enqueue and dequeue correctly", () => {
+    // Test for enqueue and dequeue functionality
+    test("should enqueue and dequeue correctly", () => {
         const queue = new CircularQueue<number>(3);
-        expect(queue.enqueue(1)).to.be.undefined;
-        expect(queue.enqueue(2)).to.be.undefined;
-        expect(queue.enqueue(3)).to.be.undefined;
-        expect(queue.enqueue(4)).to.equal("Queue is full");
-        expect(queue.dequeue()).to.equal(1);
-        expect(queue.dequeue()).to.equal(2);
-        expect(queue.dequeue()).to.equal(3);
-        expect(queue.dequeue()).to.equal("Queue is empty");
+
+        // Test enqueue operation
+        expect(queue.enqueue(1)).toBeUndefined();
+        expect(queue.enqueue(2)).toBeUndefined();
+        expect(queue.enqueue(3)).toBeUndefined();
+        expect(queue.enqueue(4)).toBe("Queue is full");
+
+        // Test dequeue operation
+        expect(queue.dequeue()).toBe(1);
+        expect(queue.dequeue()).toBe(2);
+        expect(queue.dequeue()).toBe(3);
+        expect(queue.dequeue()).toBe("Queue is empty");
     });
 });

@@ -1,5 +1,0 @@
-PRINT-NUMBERS(n)
-  if n > 100
-    return
-  print n
-  PRINT-NUMBERS(n + 1)
