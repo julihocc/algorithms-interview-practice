@@ -1,0 +1,1 @@
+I tried to solve the problem as stated in https://iq.opengenus.org/number-of-islands/
