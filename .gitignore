@@ -1,6 +1,7 @@
 node_modules/ 
 nodejs/ 
 python/
+julia/
 cpp/
 .idea/ 
 .nodejs/
