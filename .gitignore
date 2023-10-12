@@ -1,8 +1,2 @@
 node_modules/ 
-nodejs/ 
-python/
-julia/
-cpp/
-draft/
 .idea/ 
-.nodejs/
