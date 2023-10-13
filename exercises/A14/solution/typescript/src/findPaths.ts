@@ -16,23 +16,22 @@
  * // paths will be ["DDRR", "DRRD", "RDRD", "RRDD"]
  */
 export function findPaths(
-    x: number,
-    y: number,
     x0: number,
     y0: number,
+    x: number,
+    y: number,
 ): string[] {
     let paths: string[] = [""];
     if (x <= x0 && y <= y0) {
         paths = [""]
     } else if (x === x0 && y > y0) {
-        paths = ["R".repeat(y - y0)];
+        paths = ["D".repeat(y - y0)];
     } else if (y === y0 && x > x0) {
-        paths = ["D".repeat(x - x0)];
+        paths = ["R".repeat(x - x0)];
     } else if (x > x0 && y > y0) {
-        const pathFromAbove = findPaths(x - 1, y, x0, y0).map((path) => path + "D");
-        const pathFromLeft = findPaths(x, y - 1, x0, y0).map((path) => path + "R");
+        const pathFromAbove = findPaths(x0, y0, x-1, y).map((path) => path + "R");
+        const pathFromLeft = findPaths(x0, y0, x, y - 1).map((path) => path + "D");
         paths = [...pathFromAbove, ...pathFromLeft];
     }
-    console.log(x, y, x0, y0, paths);
     return paths.sort();
 }
