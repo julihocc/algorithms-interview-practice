@@ -8,7 +8,13 @@
 export class TriangularMatrix {
     private optimizedMatrix: number[];
     private dimension: number;
-
+    /**
+     * Creates a new triangular matrix.
+     * @param matrix - The original 2D array representing a square lower triangular matrix.
+     * @throws An error if the matrix is not square.
+     * @throws An error if the matrix is not lower triangular.
+     * @dimension - Number or rows/columns in the matrix.
+     */
     constructor(matrix: number[][]) {
         this.optimizedMatrix = this.optimizeMatrix(matrix);
         this.dimension = matrix.length;
