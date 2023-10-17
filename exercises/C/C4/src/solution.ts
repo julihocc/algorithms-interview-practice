@@ -20,8 +20,7 @@ export function mergeSort(node: Node | null): Node | null {
     const left = mergeSort(node);
     const right = mergeSort(nextOfMiddle);
     //Merge the sorted halves
-    const sortedList = merge(left, right);
-    return sortedList;
+    return merge(left, right);
 }
 
 export function getMiddle(node: Node | null): Node | null {
