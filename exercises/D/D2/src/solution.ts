@@ -1,23 +1,11 @@
 export function secondLargest(arr: number[]): number | null {
-    if (arr.length < 2) {
-        return null
+
+    const unique = Array.from(new Set(arr));
+    if (unique.length < 2) {
+        return null;
     }
 
-    let largest = Number.NEGATIVE_INFINITY;
-    let secondLargest = Number.NEGATIVE_INFINITY;
+    const sorted = unique.sort((a, b) => b - a);
 
-    for (let num of arr){
-      if (num>largest){
-        secondLargest = largest;
-        largest = num;
-      } else if (num>secondLargest){
-        secondLargest = num;
-      }
-    }
-
-    if (secondLargest === Number.NEGATIVE_INFINITY){
-      return null;
-    }
-
-    return secondLargest;
+    return sorted[1];
 }
