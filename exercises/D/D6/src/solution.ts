@@ -1,5 +1,6 @@
 /**
  * Longest Common Subsequence
+ * This function is an implementation of the Longest Common Subsequence (LCS) problem, which finds the longest subsequence that two sequences have in common. The provided implementation uses dynamic programming to solve the problem.
  */
 
 export function longestCommonSubsequence(text1: string, text2: string): string {

@@ -9,31 +9,31 @@
  * Output: ""111"""
  */
 
-export function solution(s:string):string {
-    let start:number = 0;
-    let max_lengt:number = 0;
-    let max_start:number = 0;
-    let freq = new Map<string, number>();
+export function solution(word:string):string {
+    let leftPointer:number = 0;
+    let maxRunLength:number = 0;
+    let maxRunStart:number = 0;
+    let freqInCurrentWindow: Map<string, number> = new Map<string, number>();
 
-    for (let end:number = 0; end<s.length; end++){
+    for (let rightPointer:number = 0; rightPointer < word.length; rightPointer++){
 
-        const char = s[end];
-        freq.set(char, (freq.get(char) || 0) + 1);
+        const char: string = word[rightPointer];
+        freqInCurrentWindow.set(char, (freqInCurrentWindow.get(char) || 0) + 1);
 
-        while (freq.size > 2){
-            const startingChar = s[start];
-            freq.set(startingChar, freq.get(startingChar)! - 1);
-            if (freq.get(startingChar) === 0){
-                freq.delete(startingChar);
+        while (freqInCurrentWindow.size > 2){
+            const startingChar:string = word[leftPointer];
+            freqInCurrentWindow.set(startingChar, freqInCurrentWindow.get(startingChar)! - 1);
+            if (freqInCurrentWindow.get(startingChar) === 0){
+                freqInCurrentWindow.delete(startingChar);
             }
-            start++;
+            leftPointer++;
         }
 
-        if (end - start + 1 > max_lengt){
-            max_lengt = end - start + 1;
-            max_start = start;
+        if (rightPointer - leftPointer + 1 > maxRunLength){
+            maxRunLength = rightPointer - leftPointer + 1;
+            maxRunStart = leftPointer;
         }
     }
 
-    return s.substring(max_start, max_start + max_lengt);
+    return word.substring(maxRunStart, maxRunStart + maxRunLength);
 }
