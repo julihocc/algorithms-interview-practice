@@ -5,7 +5,7 @@
  * @returns {number[]} - Returns the array of printed numbers
  */
 export function printNumbers(n: number = 1, logOutput: number[] = []): number[] {
-    console.log(n);
+    //console.log(n);
     logOutput.push(n);
 
     // Using a ternary operator to decide whether to continue the recursion

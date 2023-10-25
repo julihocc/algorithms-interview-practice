@@ -5,10 +5,10 @@
  */
 
 export function solution(series:string):number {
-  console.log(`series: ${series}`)
+  //console.log(`series: ${series}`)
   let stack: string[] = []
   for (let i of series) {
-    console.log(`i: ${i}`)
+    //console.log(`i: ${i}`)
     if (i == '(' || i == '{' || i == '[') {
       stack.push(i)
     } else if (i==')' || i==']' || i=='}') {
@@ -16,7 +16,7 @@ export function solution(series:string):number {
         return 0
       }
       let top:string = stack[stack.length-1]
-      console.log(`top: ${top}`)
+      //console.log(`top: ${top}`)
       if ( (top=='(' && i==')') || (top=='[' && i==']') || (top=='{' && i=='}') ) {
         stack.pop()
       } else {

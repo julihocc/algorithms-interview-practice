@@ -32,6 +32,6 @@ const findMaximum = (arr: number[], low: number, high: number): number | undefin
 // Test the function
 const myArray: number[] = [1, 5, 3, 9, 2];
 const maxValue: number | undefined = findMaximum(myArray, 0, myArray.length - 1);
-console.log(`The maximum value in the array is ${maxValue}`);
+//console.log(`The maximum value in the array is ${maxValue}`);
 
 export {findMaximum};  // Export the function

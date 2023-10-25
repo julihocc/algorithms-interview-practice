@@ -19,7 +19,7 @@ export function solution(A: string, B: string, C: string): boolean {
 
     dp.set(-1, new Map());
     dp.get(-1)!.set(-1, true);
-    console.log(dp.get(-1)!.get(-1));
+    //console.log(dp.get(-1)!.get(-1));
 
     for (let i: number = 0; i < A.length; i++) {
         dp.get(i)!.set(-1, dp.get(i-1)!.get(-1)! && A[i] == C[i]);
