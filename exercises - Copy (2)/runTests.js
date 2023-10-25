@@ -12,20 +12,16 @@ glob(testFilesPattern, (err, files) => {
 
     // Loop through each found test file and run it
     for (const file of files) {
+        console.log(`Running tests in ${file}...`);
+
         exec(`npx jest ${file}`, (error, stdout, stderr) => {
-            console.log(`Running tests in ${file}...`);
             if (error) {
                 console.error(`Error running tests in ${file}:`, error.message);
                 console.error(stderr);
                 return;
-            } else {
-                console.log(`Tests in ${file} ran successfully!`);
-            }
-            if(!!stdout) {
-                console.log(`stdout: ${stdout}`);
             }
 
+            console.log(stdout);
         });
     }
-
 });
