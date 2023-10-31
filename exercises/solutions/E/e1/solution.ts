@@ -17,7 +17,7 @@ export class TreeNode {
 export function solution(root: TreeNode | null, p: number, q: number): TreeNode | null {
     if (!root) return null;
 
-    if(root.value === p || root.value === q) return root;
+    if (root.value === p || root.value === q) return root;
 
     const left = solution(root.left, p, q);
     const right = solution(root.right, p, q);

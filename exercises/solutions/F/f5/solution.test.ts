@@ -1,12 +1,12 @@
 /**
- * // Example usage:
+ * 
  * const translations = [['c', 't'], ['i', 'r'], ['k', 'p'], ['o', 'c'], ['r', 'o'], ['t', 'e'], ['t', 'f'], ['u', 'h'], ['w', 'p']];
  * const wordPairs = [['we', 'we'], ['can', 'the'], ['work', 'people'], ['it', 'of'], ['out', 'the']];
- * console.log(decipherWords(translations, wordPairs));  // Expected output: ['yes', 'no', 'no', 'yes', 'yes']
+ * );  
  */
 
-import { expect } from 'chai';
-import { decipherWords } from './solution';
+import {expect} from 'chai';
+import {decipherWords} from './solution';
 
 describe('decipherWords', () => {
     it('should correctly decipher words for the first example', () => {

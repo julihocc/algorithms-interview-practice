@@ -1,5 +1,5 @@
-import { expect } from 'chai';
-import { levenshteinDistance } from './levenshteinDistance';
+import {expect} from 'chai';
+import {levenshteinDistance} from './levenshteinDistance';
 
 /**
  * @file levenshteinDistance.test.ts

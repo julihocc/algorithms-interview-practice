@@ -1,6 +1,11 @@
-import { TreeNode, BinarySearchTree } from "./bst"
+import {BinarySearchTree, TreeNode} from "./bst"
 
 export class AVLTree extends BinarySearchTree {
+
+    insert(value: number): void {
+        super.insert(value);
+        this.root = this._balanceNode(this.root, value);
+    }
 
     private _getHeight(node: TreeNode | null): number {
         if (node === null) {
@@ -20,55 +25,50 @@ export class AVLTree extends BinarySearchTree {
         let y = z.right!;
         let T2 = y.left;
 
-        // Rotate
+        
         y.left = z;
         z.right = T2;
 
-        return y; // y becomes the new root
+        return y; 
     }
 
     private _rotateRight(y: TreeNode): TreeNode {
         let x = y.left!;
         let T2 = x.right;
 
-        // Rotate
+        
         x.right = y;
         y.left = T2;
 
-        return x; // x becomes the new root
-    }
-
-    insert(value: number): void {
-        super.insert(value);
-        this.root = this._balanceNode(this.root, value);
+        return x; 
     }
 
     private _balanceNode(node: TreeNode | null, value: number): TreeNode | null {
         if (node === null) return node;
 
-        // Balance logic
+        
         let balance = this._getBalanceFactor(node);
 
-        // Left heavy
+        
         if (balance > 1) {
-            if (value < node.left!.value) { // Left-Left
+            if (value < node.left!.value) { 
                 return this._rotateRight(node);
-            } else { // Left-Right
+            } else { 
                 node.left = this._rotateLeft(node.left!);
                 return this._rotateRight(node);
             }
         }
 
-        // Right heavy
+        
         if (balance < -1) {
-            if (value > node.right!.value) { // Right-Right
+            if (value > node.right!.value) { 
                 return this._rotateLeft(node);
-            } else { // Right-Left
+            } else { 
                 node.right = this._rotateRight(node.right!);
                 return this._rotateLeft(node);
             }
         }
 
-        return node; // balanced node
+        return node; 
     }
 }

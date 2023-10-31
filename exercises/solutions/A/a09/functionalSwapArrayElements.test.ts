@@ -5,7 +5,7 @@
  * This file contains the unit tests for the functionalSwapArrayElements function.
  */
 
-import { functionalSwapArrayElements } from './functionalSwapArrayElements';
+import {functionalSwapArrayElements} from './functionalSwapArrayElements';
 
 /**
  * Unit tests for functionalSwapArrayElements function

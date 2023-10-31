@@ -1,4 +1,4 @@
-import { Queue } from "./Queue";
+import {Queue} from "./Queue";
 
 /**
  * @file hotPotato.ts
@@ -22,4 +22,4 @@ const hotPotato = (players: string[], num: number): string => {
     return queue.dequeue() as string;
 };
 
-export { hotPotato };
+export {hotPotato};

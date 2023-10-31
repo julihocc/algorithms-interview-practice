@@ -7,18 +7,18 @@
  * @param {number} col - The current column index.
  */
 function dfs(matrix: number[][], visited: boolean[][], row: number, col: number): void {
-    // Define the directions: up, down, left, right
+    
     const directions: [number, number][] = [[-1, 0], [1, 0], [0, -1], [0, 1]];
 
-    // Mark the current cell as visited
+    
     visited[row][col] = true;
 
-    // Explore the neighbors
+    
     for (const [dx, dy] of directions) {
         const newRow = row + dx;
         const newCol = col + dy;
 
-        // Check if the neighbor is valid and is a 1
+        
         if (
             newRow >= 0 &&
             newRow < matrix.length &&

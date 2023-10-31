@@ -35,12 +35,12 @@ export class PriorityQueue {
         return removedValue;
     }
 
-    peek():string|null{
-        if(!this.head) return null;
+    peek(): string | null {
+        if (!this.head) return null;
         return this.head.value;
     }
 
-    isEmpty():boolean{
+    isEmpty(): boolean {
         return this.head === null;
     }
 }

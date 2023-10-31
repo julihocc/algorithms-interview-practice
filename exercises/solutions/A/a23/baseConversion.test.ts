@@ -2,8 +2,8 @@
  * @file baseConversion.test.ts
  */
 
-import { baseConversion } from './baseConversion';
-import { expect } from 'chai';
+import {baseConversion} from './baseConversion';
+import {expect} from 'chai';
 
 describe('Base Conversion', () => {
     it('should convert 10 to base 2', () => {

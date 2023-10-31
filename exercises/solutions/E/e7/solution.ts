@@ -25,6 +25,14 @@ export class BinarySearchTree {
         }
     }
 
+    delete(value: number): void {
+        this.root = this._deleteRecursively(this.root, value);
+    }
+
+    transverseInOrder(): number[] {
+        return this._transverseInOrderRecursively(this.root, []);
+    }
+
     private _insertRecursively(node: TreeNode, value: number): void {
         if (value < node.value) {
             if (node.left === null) {
@@ -39,10 +47,6 @@ export class BinarySearchTree {
                 this._insertRecursively(node.right, value);
             }
         }
-    }
-
-    delete(value: number): void {
-        this.root = this._deleteRecursively(this.root, value);
     }
 
     private _deleteRecursively(node: TreeNode | null, value: number): TreeNode | null {
@@ -76,10 +80,6 @@ export class BinarySearchTree {
             currentValue = currentValue.left;
         }
         return currentValue.value;
-    }
-
-    transverseInOrder(): number[] {
-        return this._transverseInOrderRecursively(this.root, []);
     }
 
     private _transverseInOrderRecursively(node: TreeNode | null, array: number[]): number[] {

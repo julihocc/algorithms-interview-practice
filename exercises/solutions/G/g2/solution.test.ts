@@ -1,10 +1,10 @@
 /**
- * console.log(closestNumberWithSameSetBits(10));  // Output should be 12
- * console.log(closestNumberWithSameSetBits(7));   // Output should be 11
+ * );  
+ * );   
  */
 
-import { closestNumberWithSameSetBits } from './solution';
-import { expect } from 'chai';
+import {closestNumberWithSameSetBits} from './solution';
+import {expect} from 'chai';
 
 describe("closestNumberWithSameSetBits", () => {
     test('closestNumberWithSameSetBits(10) should be 12', () => {

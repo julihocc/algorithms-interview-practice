@@ -13,7 +13,7 @@
  *
  * @example
  * const paths = findPaths(2, 2, 0, 0);
- * // paths will be ["DDRR", "DRRD", "RDRD", "RRDD"]
+ * 
  */
 export function findPaths(
     x0: number,
@@ -29,7 +29,7 @@ export function findPaths(
     } else if (y === y0 && x > x0) {
         paths = ["R".repeat(x - x0)];
     } else if (x > x0 && y > y0) {
-        const pathFromAbove = findPaths(x0, y0, x-1, y).map((path) => path + "R");
+        const pathFromAbove = findPaths(x0, y0, x - 1, y).map((path) => path + "R");
         const pathFromLeft = findPaths(x0, y0, x, y - 1).map((path) => path + "D");
         paths = [...pathFromAbove, ...pathFromLeft];
     }

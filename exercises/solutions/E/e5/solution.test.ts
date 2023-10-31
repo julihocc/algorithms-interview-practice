@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {TreeNode, isMirrored} from './solution'
+import {isMirrored, TreeNode} from './solution'
 
 describe("isMirrored", () => {
 
@@ -15,10 +15,10 @@ describe("isMirrored", () => {
     });
 
     test("Asymmetric tree", () => {
-       const root = new TreeNode(1);
-       root.left = new TreeNode(2);
-       root.right = new TreeNode(3);
-       expect(isMirrored(root)).to.equal(false);
+        const root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        expect(isMirrored(root)).to.equal(false);
     });
-    
+
 });

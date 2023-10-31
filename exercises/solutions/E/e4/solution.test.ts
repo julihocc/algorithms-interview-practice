@@ -1,5 +1,6 @@
-import { expect } from "chai";
-import { Trie } from "./solution";
+import {expect} from "chai";
+import {Trie} from "./solution";
+
 describe("Example of a trie", () => {
     test("Build a trie", () => {
         const dictionary = ['bat'];

@@ -9,7 +9,7 @@ const transpose = (matrix: number[][]): number[][] => {
     const cols = matrix[0].length;
     if (!cols) return matrix;
 
-    const transposed: number[][] = Array.from({ length: cols }, () => Array(rows).fill(0));
+    const transposed: number[][] = Array.from({length: cols}, () => Array(rows).fill(0));
 
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
@@ -38,4 +38,4 @@ const rotateMatrix = (matrix: number[][]): number[][] => {
     return transposed;
 };
 
-export { rotateMatrix };
+export {rotateMatrix};

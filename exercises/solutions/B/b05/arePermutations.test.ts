@@ -1,5 +1,5 @@
-import { expect } from 'chai';
-import { arePermutations } from './arePermutations';  // Update with the actual path
+import {expect} from 'chai';
+import {arePermutations} from './arePermutations'; 
 
 describe('arePermutations', () => {
     it('should return true for permutations', () => {

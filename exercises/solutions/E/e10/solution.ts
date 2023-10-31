@@ -23,6 +23,10 @@ export class MinHeap {
         return min;
     }
 
+    public getData(): number[] {
+        return [...this.heap];
+    }
+
     private bubbleUp(): void {
         let index = this.heap.length - 1;
         const element = this.heap[index];
@@ -32,7 +36,7 @@ export class MinHeap {
             const parent = this.heap[parentIndex];
             if (parent <= element) break;
 
-            // Swap
+            
             this.heap[parentIndex] = element;
             this.heap[index] = parent;
             index = parentIndex;
@@ -75,10 +79,6 @@ export class MinHeap {
 
             index = swapIndex;
         }
-    }
-
-    public getData(): number[] {
-        return [...this.heap];
     }
 }
 

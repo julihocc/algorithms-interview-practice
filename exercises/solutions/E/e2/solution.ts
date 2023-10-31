@@ -14,7 +14,7 @@ export class TreeNode {
     }
 }
 
-export function retrieveTree(root: TreeNode | null): number[] | null{
+export function retrieveTree(root: TreeNode | null): number[] | null {
     if (root === null) {
         return null;
     }
@@ -28,7 +28,7 @@ export function retrieveTree(root: TreeNode | null): number[] | null{
     while (queue.length > 0) {
         const node: TreeNode | undefined = queue.shift();
 
-        if (node){
+        if (node) {
             if (node.left) {
                 queue.push(node.left);
                 output.push(node.left.value);

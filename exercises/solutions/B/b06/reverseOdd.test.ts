@@ -1,5 +1,5 @@
-import { expect } from 'chai';
-import { reverseOddPositionedWords } from './reverseOdd';
+import {expect} from 'chai';
+import {reverseOddPositionedWords} from './reverseOdd';
 
 describe('reverseOddPositionedWords', () => {
     it('should reverse even positioned words (0-indexed)', () => {

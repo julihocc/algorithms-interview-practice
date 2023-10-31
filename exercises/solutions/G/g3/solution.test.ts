@@ -1,7 +1,7 @@
 /**
- * console.log(countDifferentBits(10, 20));  // Output should be 4
- * console.log(countDifferentBits(7, 10));   // Output should be 3
- * console.log(countDifferentBits(9, 9));    // Output should be 0
+ * );  
+ * );   
+ * );    
  */
 
 import {countDifferentBits} from './solution';

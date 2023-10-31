@@ -7,7 +7,7 @@
  */
 
 const findMaximum = (arr: number[], low: number, high: number): number | undefined => {
-    // Base case: when the array has only one element
+    
     if (low > high) {
         return undefined;
     }
@@ -16,22 +16,22 @@ const findMaximum = (arr: number[], low: number, high: number): number | undefin
         return arr[low];
     }
 
-    // Find the middle index
+    
     const mid: number = Math.floor((low + high) / 2);
 
-    // Find the maximum value in the left half
+    
     const leftMax: number | undefined = findMaximum(arr, low, mid);
 
-    // Find the maximum value in the right half
+    
     const rightMax: number | undefined = findMaximum(arr, mid + 1, high);
 
-    // Return the greater of the two maximum values
+    
     return Math.max(leftMax ?? -Infinity, rightMax ?? -Infinity);
 };
 
-// Test the function
+
 const myArray: number[] = [1, 5, 3, 9, 2];
 const maxValue: number | undefined = findMaximum(myArray, 0, myArray.length - 1);
-//console.log(`The maximum value in the array is ${maxValue}`);
 
-export {findMaximum};  // Export the function
+
+export {findMaximum};  

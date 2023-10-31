@@ -1,4 +1,4 @@
-import { searchMatrix } from './MatrixSearch';
+import {searchMatrix} from './MatrixSearch';
 
 test('Test Case 1: Element exists', () => {
     const matrix = [

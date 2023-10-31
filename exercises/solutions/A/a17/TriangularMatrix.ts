@@ -8,6 +8,7 @@
 export class TriangularMatrix {
     private optimizedMatrix: number[];
     private dimension: number;
+
     /**
      * Creates a new triangular matrix.
      * @param matrix - The original 2D array representing a square lower triangular matrix.
@@ -21,26 +22,11 @@ export class TriangularMatrix {
     }
 
     /**
-     * Optimizes the storage of a triangular matrix.
-     * @param matrix - The original 2D array.
-     * @returns A 1D array containing the non-zero elements.
-     */
-    private optimizeMatrix(matrix: number[][]): number[] {
-        const optimized: number[] = [];
-        for (let row = 0; row < matrix.length; row++) {
-            for (let col = 0; col <= row; col++) {
-                optimized.push(matrix[row][col]);
-            }
-        }
-        return optimized;
-    }
-
-    /**
      * Retrieves the original 2D array form of the triangular matrix.
      * @returns The original 2D array.
      */
     public getOriginalMatrix(): number[][] {
-        const original: number[][] = Array.from({ length: this.dimension }, () => Array(this.dimension).fill(0));
+        const original: number[][] = Array.from({length: this.dimension}, () => Array(this.dimension).fill(0));
         let index = 0;
         for (let row = 0; row < this.dimension; row++) {
             for (let col = 0; col <= row; col++) {
@@ -63,5 +49,20 @@ export class TriangularMatrix {
         }
         const index = row * (row + 1) / 2 + col;
         return this.optimizedMatrix[index];
+    }
+
+    /**
+     * Optimizes the storage of a triangular matrix.
+     * @param matrix - The original 2D array.
+     * @returns A 1D array containing the non-zero elements.
+     */
+    private optimizeMatrix(matrix: number[][]): number[] {
+        const optimized: number[] = [];
+        for (let row = 0; row < matrix.length; row++) {
+            for (let col = 0; col <= row; col++) {
+                optimized.push(matrix[row][col]);
+            }
+        }
+        return optimized;
     }
 }

@@ -1,6 +1,6 @@
 export class ListNode {
     value: number;
-    next: ListNode | null ;
+    next: ListNode | null;
 
     constructor(value: number) {
         this.value = value;

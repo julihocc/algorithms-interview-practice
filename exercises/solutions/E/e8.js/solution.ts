@@ -25,6 +25,18 @@ export class BinarySearchTree {
         }
     }
 
+    delete(value: number): void {
+        this.root = this._deleteRecursively(this.root, value);
+    }
+
+    transverseInOrder(): number[] {
+        return this._transverseInOrderRecursively(this.root, []);
+    }
+
+    search(value: number): boolean {
+        return this._searchRecursively(this.root, value);
+    }
+
     private _insertRecursively(node: TreeNode, value: number): void {
         if (value < node.value) {
             if (node.left === null) {
@@ -39,10 +51,6 @@ export class BinarySearchTree {
                 this._insertRecursively(node.right, value);
             }
         }
-    }
-
-    delete(value: number): void {
-        this.root = this._deleteRecursively(this.root, value);
     }
 
     private _deleteRecursively(node: TreeNode | null, value: number): TreeNode | null {
@@ -78,10 +86,6 @@ export class BinarySearchTree {
         return currentValue.value;
     }
 
-    transverseInOrder(): number[] {
-        return this._transverseInOrderRecursively(this.root, []);
-    }
-
     private _transverseInOrderRecursively(node: TreeNode | null, array: number[]): number[] {
         if (node !== null) {
             this._transverseInOrderRecursively(node.left, array);
@@ -89,10 +93,6 @@ export class BinarySearchTree {
             this._transverseInOrderRecursively(node.right, array);
         }
         return array;
-    }
-
-    search(value: number): boolean {
-        return this._searchRecursively(this.root, value);
     }
 
     private _searchRecursively(node: TreeNode | null, value: number): boolean {

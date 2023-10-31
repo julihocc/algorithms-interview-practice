@@ -1,4 +1,4 @@
-// zeroMatrix.ts
+
 
 /**
  * Zero out rows and columns in a matrix if any element is zero.
@@ -14,7 +14,7 @@ function zeroMatrix(matrix: number[][]): number[][] {
     const rowFlags: boolean[] = new Array(rows).fill(false);
     const colFlags: boolean[] = new Array(cols).fill(false);
 
-    // First pass to identify rows and columns to be zeroed
+    
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             if (matrix[i][j] === 0) {
@@ -24,7 +24,7 @@ function zeroMatrix(matrix: number[][]): number[][] {
         }
     }
 
-    // Second pass to zero out identified rows and columns
+    
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             if (rowFlags[i] || colFlags[j]) {
@@ -36,4 +36,4 @@ function zeroMatrix(matrix: number[][]): number[][] {
     return matrix;
 }
 
-export { zeroMatrix };
+export {zeroMatrix};

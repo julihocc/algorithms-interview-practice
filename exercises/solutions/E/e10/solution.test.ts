@@ -1,19 +1,19 @@
 /**
  * Example:
  *
- * // Using MinHeap as a priority queue
+ * 
  * const pq = new MinHeap();
  * pq.insert(10);
  * pq.insert(5);
  * pq.insert(15);
- * console.log(pq.getData())
+ * )
  *
- * console.log(pq.extractMin()); // 5
- * console.log(pq.getData())
- * console.log(pq.extractMin()); // 10
- * console.log(pq.getData())
- * console.log(pq.extractMin()); // 15
- * console.log(pq.getData())
+ * ); 
+ * )
+ * ); 
+ * )
+ * ); 
+ * )
  */
 
 import {MinHeap} from './solution';

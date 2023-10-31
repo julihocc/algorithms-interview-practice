@@ -36,7 +36,7 @@ const findLargestRectangleInHistogram = (heights: number[]): number => {
  * @returns {number} - The area of the largest rectangle in the binary matrix.
  */
 const findLargestRectangle = (matrix: number[][]): number => {
-    // Check if the matrix is undefined or empty
+    
     if (!matrix || matrix.length === 0 || !matrix[0]) {
         return 0;
     }
@@ -55,4 +55,4 @@ const findLargestRectangle = (matrix: number[][]): number => {
     return maxArea;
 };
 
-export { findLargestRectangle };
+export {findLargestRectangle};

@@ -1,5 +1,5 @@
 /**
- * // Example usage:
+ * 
  * const g = new Graph(7);
  * g.addEdge(0, 1);
  * g.addEdge(0, 2);
@@ -14,14 +14,14 @@
  * const path = g.bfsShortestPath(start, target);
  *
  * if (path) {
- *        console.log(`Shortest path from ${start} to ${target} is:`, path );
+ *        ;
  * } else {
- *        console.log(`No path found between ${start} and ${target}.`);
+ *        ;
  * }
  */
 
-import { Graph } from './solution';
-import { expect } from 'chai';
+import {Graph} from './solution';
+import {expect} from 'chai';
 
 describe('Graph', () => {
     it('should find the shortest path between two vertices', () => {
@@ -43,7 +43,7 @@ describe('Graph', () => {
 
     it('should return a shorter path if one exists', () => {
         const g = new Graph(7);
-        g.addEdge(0,6);
+        g.addEdge(0, 6);
         g.addEdge(0, 1);
         g.addEdge(0, 2);
         g.addEdge(1, 3);

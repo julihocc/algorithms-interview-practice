@@ -1,5 +1,5 @@
-import { expect } from "chai";
-import { hotPotato } from "./hotPotato";
+import {expect} from "chai";
+import {hotPotato} from "./hotPotato";
 
 /**
  * @file hotPotato.test.ts

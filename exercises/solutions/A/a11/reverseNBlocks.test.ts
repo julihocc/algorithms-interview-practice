@@ -1,5 +1,5 @@
-// File: /test/reverseNBlocks.test.ts
-import { reverseNBlocks } from './reverseNBlocks';
+
+import {reverseNBlocks} from './reverseNBlocks';
 
 describe('reverseNBlocks', () => {
     it('should reverse 3-sized blocks', () => {

@@ -15,7 +15,7 @@ export class Trie {
         this.root = new TrieNode();
     }
 
-    // Insert a word into the trie
+    
     insert(word: string): void {
         let currentNode = this.root;
         for (let i = 0; i < word.length; i++) {
@@ -28,7 +28,7 @@ export class Trie {
         currentNode.isEndOfWord = true;
     }
 
-    // Build trie from a list of words
+    
     buildTrie(dictionary: string[]): void {
         for (const word of dictionary) {
             this.insert(word);

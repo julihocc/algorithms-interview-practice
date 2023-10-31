@@ -17,4 +17,4 @@ const fisherYatesShuffle = <T>(arr: T[]): T[] => {
     return shuffledArr;
 };
 
-export { fisherYatesShuffle };
+export {fisherYatesShuffle};

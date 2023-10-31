@@ -12,8 +12,8 @@ export function findLoopStart(head: ListNode | null): ListNode | null {
     let slow: ListNode | null = head;
     let fast: ListNode | null = head;
 
-    // Step 1: Find the meeting point
-    let isLoop :boolean = false;
+    
+    let isLoop: boolean = false;
     while (fast && fast.next) {
         slow = slow!.next;
         fast = fast.next.next;
@@ -22,7 +22,7 @@ export function findLoopStart(head: ListNode | null): ListNode | null {
             break;
         }
     }
-    if(!isLoop) return null;
+    if (!isLoop) return null;
 
     slow = head;
     while (slow !== fast) {

@@ -1,5 +1,5 @@
-import { expect } from 'chai';
-import { TriangularMatrix } from './TriangularMatrix';
+import {expect} from 'chai';
+import {TriangularMatrix} from './TriangularMatrix';
 
 describe('TriangularMatrix', () => {
     it('should store and retrieve a 3x3 triangular matrix', () => {

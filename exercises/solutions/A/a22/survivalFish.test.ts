@@ -1,8 +1,8 @@
 /**
  * @file survivalFish.test.ts
  */
-import { expect } from 'chai';
-import { survivalFish } from './survivalFish';  // Make sure this path is correct
+import {expect} from 'chai';
+import {survivalFish} from './survivalFish'; 
 
 describe('survivalFish', () => {
     const testCases: Array<[number[], number]> = [

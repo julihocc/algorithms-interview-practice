@@ -32,7 +32,7 @@ export class Graph {
             const vertex = queue.shift()!;
 
             if (vertex === target) {
-                // Retrieve the path from start to target
+                
                 const path: number[] = [];
                 let current = vertex;
                 while (current !== -1) {
@@ -51,7 +51,7 @@ export class Graph {
             }
         }
 
-        // If no path is found
+        
         return null;
     }
 }

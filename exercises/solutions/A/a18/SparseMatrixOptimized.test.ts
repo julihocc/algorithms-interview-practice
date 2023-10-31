@@ -1,5 +1,5 @@
-import { expect } from "chai";
-import { SparseMatrixOptimized } from "./SparseMatrixOptimized";
+import {expect} from "chai";
+import {SparseMatrixOptimized} from "./SparseMatrixOptimized";
 
 describe("SparseMatrixOptimized", () => {
     it("should correctly convert a 2D matrix to optimized sparse matrix representation", () => {

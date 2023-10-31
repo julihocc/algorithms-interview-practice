@@ -8,12 +8,12 @@
  * @returns {number | string} - Returns 0 if balanced, otherwise returns the number of missing parentheses.
  */
 export function checkBalancedParentheses(series: string): number {
-    let stack: string[]   = [];
-    for (let i of series){
-        if (i=== '('){
+    let stack: string[] = [];
+    for (let i of series) {
+        if (i === '(') {
             stack.push(i);
-        } else if (i === ')'){
-            if (stack.length === 0){
+        } else if (i === ')') {
+            if (stack.length === 0) {
                 return 1;
             }
             stack.pop();

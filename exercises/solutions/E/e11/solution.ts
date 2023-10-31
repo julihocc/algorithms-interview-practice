@@ -26,7 +26,7 @@ export function findIntersections(horizontalSegments: HorizontalSegment[], verti
                 horizontal.yCoord >= vertical.startingY &&
                 horizontal.yCoord <= vertical.endingY
             ) {
-                intersectionPoints.push({ x: vertical.xCoord, y: horizontal.yCoord });
+                intersectionPoints.push({x: vertical.xCoord, y: horizontal.yCoord});
             }
         }
     }

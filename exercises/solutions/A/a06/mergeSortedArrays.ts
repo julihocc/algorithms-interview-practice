@@ -40,4 +40,4 @@ const mergeSortedArrays = (
     }
 };
 
-export { mergeSortedArrays };
+export {mergeSortedArrays};

@@ -1,5 +1,5 @@
-import { expect } from 'chai';
-import { checkBalancedParentheses } from './BalancedParentheses';
+import {expect} from 'chai';
+import {checkBalancedParentheses} from './BalancedParentheses';
 
 describe('checkBalancedParentheses', () => {
     it('should return "Balanced" for a balanced series', () => {

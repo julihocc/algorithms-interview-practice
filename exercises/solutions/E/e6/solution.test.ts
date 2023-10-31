@@ -8,7 +8,7 @@ describe("detectWord", () => {
 
         expect(detectWord(stream, words)).to.equal("ab");
     })
-    test("return null", ()=>{
+    test("return null", () => {
         const stream = "abcde";
         const words = ["ba"]
 

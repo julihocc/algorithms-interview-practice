@@ -2,7 +2,7 @@
  * @file /test/fisherYatesShuffle.test.ts
  */
 
-import { fisherYatesShuffle } from './fisherYatesShuffle';
+import {fisherYatesShuffle} from './fisherYatesShuffle';
 
 test('Shuffle an array of numbers using Fisher-Yates', () => {
     const originalArray = [1, 2, 3, 4, 5];

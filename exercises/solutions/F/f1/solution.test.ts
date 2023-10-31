@@ -1,5 +1,5 @@
 /**
- * // Example usage:
+ * 
  * const graph = new Graph();
  * graph.addEdge(5, 2);
  * graph.addEdge(5, 0);
@@ -9,7 +9,7 @@
  * graph.addEdge(3, 1);
  *
  * const result = graph.topologicalSort();
- * console.log(result);  // Expected output: [ 4, 5, 0, 2, 3, 1 ]
+ * ;  
  */
 
 import { Graph } from './solution';

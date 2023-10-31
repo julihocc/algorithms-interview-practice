@@ -10,11 +10,11 @@ export class GraphMatrix {
 
     addEdge(v1: number, v2: number): void {
         if (v1 >= this.vertices || v2 >= this.vertices || v1 < 0 || v2 < 0) {
-            console.log('Invalid vertices');
+            ;
             return;
         }
         this.adjacencyMatrix[v1][v2] = 1;
-        this.adjacencyMatrix[v2][v1] = 1;  // since it's an undirected graph
+        this.adjacencyMatrix[v2][v1] = 1;  
     }
 
     getMatrix(): number[][] {

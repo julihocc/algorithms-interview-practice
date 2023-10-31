@@ -1,4 +1,4 @@
-// src/findBalanceIndex.ts
+
 
 /**
  * Finds the index that balances the left and right sum of the array.

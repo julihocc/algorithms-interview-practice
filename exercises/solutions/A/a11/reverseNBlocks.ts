@@ -1,4 +1,4 @@
-// File: reverseNBlocks.ts
+
 /**
  * Reverses N-sized blocks of an array.
  * @param arr - The array to be modified.

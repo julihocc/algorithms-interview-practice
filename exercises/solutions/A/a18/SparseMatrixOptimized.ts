@@ -14,21 +14,6 @@ export class SparseMatrixOptimized {
     }
 
     /**
-     * Converts a 2D matrix to an optimized sparse matrix representation
-     * @param matrix - The 2D matrix to be converted
-     */
-    private convertToSparse(matrix: number[][]): void {
-        for (let i = 0; i < matrix.length; i++) {
-            for (let j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j] !== 0) {
-                    const key = `${i}:${j}`;
-                    this.sparseMap[key] = matrix[i][j];
-                }
-            }
-        }
-    }
-
-    /**
      * Gets the optimized sparse matrix representation
      * @returns Hash map containing keys as "row:col" and values as non-zero elements
      */
@@ -43,7 +28,7 @@ export class SparseMatrixOptimized {
      * @returns The original 2D matrix
      */
     public toOriginalMatrix(rows: number, cols: number): number[][] {
-        const originalMatrix: number[][] = Array.from({ length: rows }, () => Array(cols).fill(0));
+        const originalMatrix: number[][] = Array.from({length: rows}, () => Array(cols).fill(0));
 
         for (const [key, value] of Object.entries(this.sparseMap)) {
             const [row, col] = key.split(":").map(Number);
@@ -51,5 +36,20 @@ export class SparseMatrixOptimized {
         }
 
         return originalMatrix;
+    }
+
+    /**
+     * Converts a 2D matrix to an optimized sparse matrix representation
+     * @param matrix - The 2D matrix to be converted
+     */
+    private convertToSparse(matrix: number[][]): void {
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] !== 0) {
+                    const key = `${i}:${j}`;
+                    this.sparseMap[key] = matrix[i][j];
+                }
+            }
+        }
     }
 }

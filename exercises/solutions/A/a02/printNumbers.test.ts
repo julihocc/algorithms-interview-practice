@@ -1,4 +1,5 @@
-import { printNumbers } from './printNumbers';
+import {printNumbers} from './printNumbers';
+
 describe('printNumbers', () => {
     let logOutput: number[] = [];
 
@@ -9,6 +10,6 @@ describe('printNumbers', () => {
 
     it('should print numbers from 1 to 100', () => {
         const result = printNumbers();
-        expect(result).toEqual(Array.from({ length: 100 }, (_, i) => i + 1));
+        expect(result).toEqual(Array.from({length: 100}, (_, i) => i + 1));
     });
 });

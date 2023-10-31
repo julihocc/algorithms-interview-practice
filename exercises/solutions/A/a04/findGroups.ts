@@ -12,12 +12,12 @@ function findGroups(matrix: number[][]): number {
     const cols = matrix[0].length;
     if (!cols) return 0;
 
-    // Initialize visited matrix
-    const visited: boolean[][] = Array.from({ length: rows }, () => Array(cols).fill(false));
+    
+    const visited: boolean[][] = Array.from({length: rows}, () => Array(cols).fill(false));
 
     let count = 0;
 
-    // Loop through each cell in the matrix
+    
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             if (matrix[i][j] === 1 && !visited[i][j]) {

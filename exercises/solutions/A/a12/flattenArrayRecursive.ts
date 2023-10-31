@@ -1,4 +1,4 @@
-// src/flattenArrayRecursive.ts
+
 
 /**
  * Recursively flattens a nested array.

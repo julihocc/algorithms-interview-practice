@@ -27,4 +27,4 @@ class Queue<T> {
     }
 }
 
-export { Queue };
+export {Queue};

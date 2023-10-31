@@ -1,4 +1,4 @@
-// src/flattenArrayIterative.ts
+
 
 /**
  * Iteratively flattens a nested array.

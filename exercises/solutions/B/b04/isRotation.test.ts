@@ -1,5 +1,5 @@
-import { isRotation } from './isRotation';
-import { expect } from 'chai';
+import {isRotation} from './isRotation';
+import {expect} from 'chai';
 
 describe('isRotation', () => {
     it('should return true for valid rotations', () => {

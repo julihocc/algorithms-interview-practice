@@ -10,12 +10,12 @@
  */
 const countCarPasses = (cars: string[]): number => {
 
-    let count:number = 0
+    let count: number = 0
 
-    for (let i:number=0; i<cars.length; i++) {
-        if (cars[i]==="c->"){
-            for (let j:number=i+1; j<cars.length; j++) {
-                if (cars[j]==="<-c"){
+    for (let i: number = 0; i < cars.length; i++) {
+        if (cars[i] === "c->") {
+            for (let j: number = i + 1; j < cars.length; j++) {
+                if (cars[j] === "<-c") {
                     count++;
                 }
             }
@@ -25,4 +25,4 @@ const countCarPasses = (cars: string[]): number => {
     return count;
 };
 
-export { countCarPasses };
+export {countCarPasses};

@@ -12,9 +12,9 @@
 However, I think that 5 fish remain
 
 ```
--2 6 1 -7 -5 4 3 // 1 and -7 met, -7 ate 1
+-2 6 1 -7 -5 4 3 
 
--2 6 -7 -5 4 3 // 6 and  -7 met, -7 ate 6
+-2 6 -7 -5 4 3 
 
--2 -7 -5 4 3 // remaining fish cotinued their 
+-2 -7 -5 4 3 
 ```

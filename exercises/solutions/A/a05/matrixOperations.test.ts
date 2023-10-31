@@ -1,4 +1,4 @@
-import { rotateMatrix } from './matrixOperations'; // Assuming the above code is in a file named matrixOperations.ts
+import {rotateMatrix} from './matrixOperations'; 
 
 describe('Matrix Operations', () => {
     test('rotateMatrix should rotate a 2x2 matrix 90 degrees clockwise', () => {
@@ -13,5 +13,5 @@ describe('Matrix Operations', () => {
         expect(rotateMatrix(inputMatrix)).toEqual(expectedMatrix);
     });
 
-    // Add more test cases as needed
+    
 });

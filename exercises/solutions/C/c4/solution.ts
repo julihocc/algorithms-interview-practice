@@ -12,14 +12,14 @@ export function mergeSort(node: Node | null): Node | null {
     if (!node || !node.next) {
         return node;
     }
-    //Split the linked list into two halves
+    
     const middle = getMiddle(node);
     const nextOfMiddle = middle!.next;
     middle!.next = null;
-    //Recursively sort the two halves
+    
     const left = mergeSort(node);
     const right = mergeSort(nextOfMiddle);
-    //Merge the sorted halves
+    
     return merge(left, right);
 }
 
@@ -38,20 +38,19 @@ export function getMiddle(node: Node | null): Node | null {
 }
 
 export function merge(left: Node | null, right: Node | null): Node | null {
-  if (!left) {
-    return right;
-  }
-  if (!right) {
-    return left;
-  }
+    if (!left) {
+        return right;
+    }
+    if (!right) {
+        return left;
+    }
 
-  let result: Node | null = null;
+    let result: Node | null = null;
 
     if (left.value <= right.value) {
         result = left;
         result.next = merge(left.next, right);
-    }
-    else {
+    } else {
         result = right;
         result.next = merge(left, right.next);
     }
@@ -59,7 +58,7 @@ export function merge(left: Node | null, right: Node | null): Node | null {
 }
 
 export function retrieveList(node: Node | null): number[] {
-  const orderedList:number[] = [];
+    const orderedList: number[] = [];
     let current: Node | null = node;
     while (current !== null) {
         orderedList.push(current.value);

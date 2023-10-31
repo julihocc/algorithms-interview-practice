@@ -1,7 +1,7 @@
-// test/findBalanceIndex.test.ts
 
-import { expect } from 'chai';
-import { findBalanceIndex } from './findBalanceIndex';
+
+import {expect} from 'chai';
+import {findBalanceIndex} from './findBalanceIndex';
 
 describe('findBalanceIndex', () => {
 

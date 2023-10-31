@@ -1,5 +1,5 @@
-import { expect } from 'chai';
-import { areAnagrams } from './findAnagrams';
+import {expect} from 'chai';
+import {areAnagrams} from './findAnagrams';
 
 describe('areAnagrams', () => {
     /**

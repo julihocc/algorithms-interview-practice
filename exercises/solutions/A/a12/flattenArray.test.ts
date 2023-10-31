@@ -1,13 +1,13 @@
-// test/flattenArray.test.ts
 
-import { flattenArrayRecursive } from './flattenArrayRecursive';
-import { flattenArrayIterative } from './flattenArrayIterative';
+
+import {flattenArrayRecursive} from './flattenArrayRecursive';
+import {flattenArrayIterative} from './flattenArrayIterative';
 
 describe('Flatten Array', () => {
     const testCases = [
-        { input: [1, [2, [3, 4]], 5], output: [1, 2, 3, 4, 5] },
-        { input: [], output: [] },
-        { input: [1, 2, 3], output: [1, 2, 3] },
+        {input: [1, [2, [3, 4]], 5], output: [1, 2, 3, 4, 5]},
+        {input: [], output: []},
+        {input: [1, 2, 3], output: [1, 2, 3]},
     ];
 
     testCases.forEach((testCase, index) => {

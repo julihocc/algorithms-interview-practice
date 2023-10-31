@@ -3,8 +3,8 @@
  * @description This file contains unit tests for the countCarPasses function.
  */
 
-import { expect } from 'chai';
-import { countCarPasses } from './countCarPasses';
+import {expect} from 'chai';
+import {countCarPasses} from './countCarPasses';
 
 describe('countCarPasses', () => {
     it('should return 7 for the given example', () => {
